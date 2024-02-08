@@ -16,7 +16,7 @@ pipeline{
         } 
         stage('Testing'){
             steps{
-            sh 'firebase deploy -P devops-proj-testing --token "FIREBASE_DEPLOY_TOKEN"'
+            sh 'firebase deploy -P devops-proj-testing --token "$FIREBASE_DEPLOY_TOKEN"'
             }
         } 
         stage('Staging'){
