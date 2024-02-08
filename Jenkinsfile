@@ -21,12 +21,12 @@ pipeline{
         } 
         stage('Staging'){
             steps{
-            echo 'This is Testing.'
+             sh 'firebase deploy -P devops-proj-staging --token "$FIREBASE_DEPLOY_TOKEN"'
             }
         } 
         stage('Production'){
             steps{
-            echo 'This is Testing.'
+            sh 'firebase deploy -P devops-proj-production-bcfd9 --token "$FIREBASE_DEPLOY_TOKEN"'
             }
         } 
     }
