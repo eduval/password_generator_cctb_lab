@@ -8,6 +8,7 @@ pipeline{
         stage('Building'){
             steps{
            // sh 'npm install -g firebase-tools'
+                echo 'Biulding...'
             }
         } 
         stage('Testing Environment'){
