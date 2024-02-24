@@ -1,9 +1,5 @@
 pipeline{
-    agent {
-        docker {
-            image 'node:18.17.1-alpine3.18'
-        }
-    }
+    agent any
     environment {
     FIREBASE_DEPLOY_TOKEN = credentials('firebase-token')
     }
